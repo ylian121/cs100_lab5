@@ -13,7 +13,7 @@ void Rectangle::set_height(int h) {
 }
 
 int Rectangle::area() {
-    return 1;
+    return 1; 
 }
 
 int Rectangle::perimeter() {
