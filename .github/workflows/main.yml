@@ -21,7 +21,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run passing tests
       run: |
-        g++ -o passing_test src/rectangle.cpp tests/test.cpp
+        g++ -o passing_test src/rectangle.cpp tests/test.cpp header/rectangle.hpp
 
     # Runs a set of commands using the runners shell
     - name: Run failing tests
