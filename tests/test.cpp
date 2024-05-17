@@ -1,4 +1,4 @@
-#include "rectangle.cpp"
+#include "../src/rectangle.cpp"
 
 #include "gtest/gtest.h"
 
