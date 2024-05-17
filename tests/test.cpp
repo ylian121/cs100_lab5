@@ -15,12 +15,12 @@ TEST(ConstructorsTest, testInput1) {
 }
 
 TEST(AreaTest, testInt1) {
-    Rectangle* testRectangle = new Rectangle(5, 10)
+    Rectangle* testRectangle = new Rectangle(5, 10);
     EXPECT_EQ(testRectangle->area(), 50);
 }
 
 TEST(AreaTest, testZero1) {
-    Rectangle* testRectangle = new Rectangle(0, 0)
+    Rectangle* testRectangle = new Rectangle(0, 0);
     EXPECT_EQ(testRectangle->area(), 0);
 }
 
