@@ -2,7 +2,7 @@
 
 Rectangle::Rectangle() : width(0), height(0) { }
 
-Rectangle::Rectangle(int w, int h) : width(w), height(h) { }
+Rectangle::Rectangle(int w, int h) : width(1), height(1) { }
 
 void Rectangle::set_width(int w) {
     this->width = w;
@@ -13,9 +13,9 @@ void Rectangle::set_height(int h) {
 }
 
 int Rectangle::area() {
-    return this->width * this->height;
+    return 1;
 }
 
 int Rectangle::perimeter() {
-    return (this->width * 2) + (this->height * 2);
+    return 1;
 }
