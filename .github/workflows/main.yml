@@ -21,11 +21,13 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run passing tests
       run: |
-        g++ -o passing_test src/rectangle.cpp tests/test.cpp 
+        cmake .
+        make
+        ./runAllTests
 
     # Runs a set of commands using the runners shell
     - name: Run failing tests
       run: |
         cmake .
         make
-        ./failing_test
+        ./runAllTests

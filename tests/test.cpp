@@ -26,20 +26,20 @@ TEST(AreaTest, testZero1) {
 
 TEST(AreaTest, testInput3) {
     Rectangle* testRectangle = new Rectangle(2, 2);
-    EXPECT_EQ(testRectangle->area(), 4)
+    EXPECT_EQ(testRectangle->area(), 4);
 }
 
 TEST(PerimeterTest, testInt1) {
     Rectangle* testRectangle = new Rectangle(2, 4);
-    EXPECT_EQ(testRectangle->perimeter(), 12)
+    EXPECT_EQ(testRectangle->perimeter(), 12);
 }
 
 TEST(PerimeterTest, testZero1) {
     Rectangle* testRectangle = new Rectangle(0, 0);
-    EXPECT_EQ(testRectangle->perimeter(), 0)
+    EXPECT_EQ(testRectangle->perimeter(), 0);
 }
 
 TEST(PerimeterTest, testInput3) {
     Rectangle* testRectangle = new Rectangle(1, 1);
-    EXPECT_EQ(testRectangle->perimeter(), 4)
+    EXPECT_EQ(testRectangle->perimeter(), 4);
 }
