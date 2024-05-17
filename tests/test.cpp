@@ -10,9 +10,8 @@ TEST(ConstructorsTest, testParameter1) {
     EXPECT_NO_THROW (Rectangle* testRectangle = new Rectangle(5, 10));
 }
 
-//needs to be created
 TEST(ConstructorsTest, testInput1) {
-
+    EXPECT_NO_THROW (Rectangle* testRectangle = new Rectangle(0, 0));
 }
 
 TEST(AreaTest, testInt1) {
@@ -25,10 +24,9 @@ TEST(AreaTest, testZero1) {
     EXPECT_EQ(testRectangle->area(), 0)
 }
 
-//needs to be created
 TEST(AreaTest, testInput3) {
-    std::string test_str = "";
-    EXPECT_EQ(0, count(test_str));
+    Rectangle* testRectangle = new Rectangle(2, 2)
+    EXPECT_EQ(testRectangle->area(), 4)
 }
 
 TEST(PerimeterTest, testInt1) {
@@ -41,8 +39,7 @@ TEST(PerimeterTest, testZero1) {
     EXPECT_EQ(testRectangle->perimeter(), 0)
 }
 
-//needs to be created
 TEST(PerimeterTest, testInput3) {
-    std::string test_str = "";
-    EXPECT_EQ(0, count(test_str));
+    Rectangle* testRectangle = new Rectangle(1, 1)
+    EXPECT_EQ(testRectangle->perimeter(), 4)
 }
