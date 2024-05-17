@@ -23,11 +23,11 @@ jobs:
       run: |
         cmake .
         make
-        ./runAllTests
+        ./passing_test
 
     # Runs a set of commands using the runners shell
     - name: Run failing tests
       run: |
         cmake .
         make
-        ./runAllTests
+        ./failing_test
