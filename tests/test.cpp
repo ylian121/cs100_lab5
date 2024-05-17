@@ -1,17 +1,21 @@
-#include "../src/rectangle.cpp"
+#include "../header/rectangle.hpp"
 
 #include "gtest/gtest.h"
 
+#include <stdexcept>
+
 TEST(ConstructorsTest, testDefault1) {
-    EXPECT_NO_THROW (Rectangle* testRectangle = new Rectangle());
+    Rectangle* testRectangle = new Rectangle();
+    EXPECT_EQ(testRectangle->get_width(), 0);
 }
 
 TEST(ConstructorsTest, testParameter1) {
-    EXPECT_NO_THROW (Rectangle* testRectangle = new Rectangle(5, 10));
+    Rectangle* testRectangle = new Rectangle(5, 10);
+    EXPECT_EQ(testRectangle->get_width(), 5);
 }
 
-TEST(ConstructorsTest, testInput1) {
-    EXPECT_NO_THROW (Rectangle* testRectangle = new Rectangle(0, 0));
+TEST(ConstructorsTest, testParameter2) {
+    EXPECT_DEATH (Rectangle* testRectangle = new Rectangle(-3, 0), "Width and/or height must be greater than 0.");
 }
 
 TEST(AreaTest, testInt1) {
@@ -20,7 +24,7 @@ TEST(AreaTest, testInt1) {
 }
 
 TEST(AreaTest, testZero1) {
-    Rectangle* testRectangle = new Rectangle(0, 0);
+    Rectangle* testRectangle = new Rectangle();
     EXPECT_EQ(testRectangle->area(), 0);
 }
 
@@ -35,7 +39,7 @@ TEST(PerimeterTest, testInt1) {
 }
 
 TEST(PerimeterTest, testZero1) {
-    Rectangle* testRectangle = new Rectangle(0, 0);
+    Rectangle* testRectangle = new Rectangle();
     EXPECT_EQ(testRectangle->perimeter(), 0);
 }
 
