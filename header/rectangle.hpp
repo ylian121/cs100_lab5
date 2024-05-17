@@ -12,7 +12,7 @@ class Rectangle {
         void set_width(int w);
         void set_height(int h);
         int area();
-        int perimeter();
+        int perimeter(); //2*width + 2*height
 };
 
 #endif // RECTANGLE_HPP
