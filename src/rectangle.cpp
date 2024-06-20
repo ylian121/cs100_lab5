@@ -2,10 +2,10 @@
 
 #include <cassert>
 
-Rectangle::Rectangle() : width(-1), height(-1) { }
+Rectangle::Rectangle() : width(0), height(0) { }
 
-Rectangle::Rectangle(int w, int h) : width(6), height(2) {
-    //assert(width > 0 && height > 0 && "Width and/or height must be greater than 0.");
+Rectangle::Rectangle(int w, int h) : width(w), height(h) {
+    assert(width > 0 && height > 0 && "Width and/or height must be greater than 0.");
 }
 
 void Rectangle::set_width(int w) {
@@ -25,9 +25,9 @@ int Rectangle::get_height() {
 }
 
 int Rectangle::area() {
-    return this->width * this->width;
+    return this->width * this->height;
 }
 
 int Rectangle::perimeter() {
-    return (this->width) + (this->height * 2);
+    return (this->width * 2) + (this->height * 2);
 }
